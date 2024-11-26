@@ -13,7 +13,7 @@
     password : string
   }
 
-  const Login = () => {
+ export const Login = () => {
 
     const [signState, setSignState] = useState('Sign In');
     const [showSpinner, setShowSpinner] = useState(false)
@@ -39,6 +39,12 @@
         console.log('This is the response data', response.data) 
 
         if (response.status === 200) {
+          const userData = response.data.user;
+
+          console.log("this is user data to store :", userData);
+
+          localStorage.setItem('UserInfo', JSON.stringify(userData))
+
           Swal.fire({
           icon: 'success',
           title: signState === 'Sign In' ? 'Logged In Successfully!' : 'Registered Successfully!',
@@ -51,6 +57,7 @@
           setShowSpinner(true)
           setTimeout(() => {
             setShowSpinner(false)
+            console.log("Iam navigate to chatpage")
             navigate('/chatPage')
           },3000)     
         
@@ -261,4 +268,3 @@
     )
   }
  
-  export default Login
