@@ -1,0 +1,197 @@
+/* From Uiverse.io by AbanoubMagdy1 */ 
+.wave-group {
+    position: relative;
+  }
+  
+  .wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 320px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+  }
+  
+  .wave-group .input:focus {
+    outline: none;
+  }
+  
+  .wave-group .label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+  }
+  
+  .wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+  }
+  
+  .wave-group .input:focus ~ label .label-char,
+  .wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #5264AE;
+  }
+  
+  .wave-group .bar {
+    position: relative;
+    display: block;
+    width: 320px;
+  }
+  
+  .wave-group .bar:before,.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  .wave-group .bar:before {
+    left: 50%;
+  }
+  
+  .wave-group .bar:after {
+    right: 50%;
+  }
+  
+  .wave-group .input:focus ~ .bar:before,
+  .wave-group .input:focus ~ .bar:after {
+    width: 50%;
+  }
+  
+  /* From Uiverse.io by TreepDeep */ 
+.button.google {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(50, 50, 80, 0.25);
+  gap: 0.75rem;
+  color: #ffffff;
+  background-color: rgb(50, 50, 80);
+  cursor: pointer;
+  transition: all 0.6s ease;
+  text-decoration: none;
+}
+
+.button.google svg {
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+  margin-right: 0.5rem;
+}
+
+.button.google:hover {
+  transform: scale(1.02);
+  background-color: rgb(90, 90, 120);
+  box-shadow: 0 2px 4px rgba(90, 90, 120, 0.1);
+}
+
+.button.google:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 40, 0.3);
+}
+
+.button.google:active {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .button.google {
+    max-width: 100%;
+  }
+}
+
+.custom-swal {
+  width: 300px;
+  /* Set the desired width */
+  height: auto;
+  /* Adjust height dynamically or set a fixed height */
+  padding: 20px;
+  /* Adjust padding if needed */
+  font-size: 14px;
+  /* Customize font size */
+}
+
+.custom-swal .swal2-title {
+  font-size: 18px;
+  /* Adjust title size */
+  font-weight: bold;
+}
+
+.custom-swal .swal2-content {
+  font-size: 14px;
+  /* Adjust text size */
+}
+
+
+.loading-spinner {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.loading-spinner.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #1f4167;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+}
+
+.dotOne {
+  animation-delay: 0s;
+}
+
+.dotTwo {
+  animation-delay: 0.2s;
+}
+
+.dotThree {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+
