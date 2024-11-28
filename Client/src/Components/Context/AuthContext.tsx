@@ -9,7 +9,8 @@ interface User {
 
 interface ChatContextType {
   user: User | null;
-  setUser: (user: User | null) => void;
+    setUser: (user: User | null) => void;
+    logout: () => void;
 }
 
 export const ChatContext = createContext<ChatContextType | undefined>(undefined);

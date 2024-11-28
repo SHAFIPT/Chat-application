@@ -33,9 +33,15 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
       navigate("/"); 
     }
   }, [navigate]);
+    
+    const logout = () => {
+        localStorage.removeItem("UserInfo");
+        setUser(null);
+        navigate('/')
+  }
 
   return (
-    <ChatContext.Provider value={{ user, setUser }}>
+    <ChatContext.Provider value={{ user, setUser , logout }}>
       {children}
     </ChatContext.Provider>
   );
