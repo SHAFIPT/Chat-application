@@ -195,7 +195,7 @@
           </button>
         </div>
 
-        <div className="btn button">
+        <div className="">
           <button
             type="submit"
             className="w-[320px] sm:w-[380px] md:w-[300px] lg:w-[320px]  bg-[#1f4167] text-white h-14 rounded-[5px] font-semibold text-[16px] sm:text-[17px] lg:text-[19px]"
